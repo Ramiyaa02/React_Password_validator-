@@ -1,0 +1,178 @@
+/* Full background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center container */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* White card */
+.card {
+  background: white;
+  padding: 30px;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Title */
+.title {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Input box */
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  margin-bottom: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+/* Strength bar base */
+.strength-bar {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 10px;
+  margin-top: 5px;
+  transition: 0.4s width, background-color;
+}
+
+/* Weak */
+.strength-bar.weak {
+  width: 33%;
+  background: red;
+}
+
+/* Medium */
+.strength-bar.medium {
+  width: 66%;
+  background: orange;
+}
+
+/* Strong */
+.strength-bar.strong {
+  width: 100%;
+  background: green;
+}
+
+/* Strength text */
+.strength-text {
+  margin-top: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.strength-text.weak {
+  color: red;
+}
+
+.strength-text.medium {
+  color: orange;
+}
+
+.strength-text.strong {
+  color: green;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/* Input wrapper (input + eye button) */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Eye button */
+.toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Rules section */
+.rules {
+  margin-top: 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.valid {
+  color: green;
+  font-weight: bold;
+}
+
+.invalid {
+  color: red;
+  font-weight: bold;
+}
+/* Button Area */
+.btn-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.copy-btn, .gen-btn {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.copy-btn {
+  background: #2575fc;
+  color: white;
+}
+
+.copy-btn:hover {
+  background: #0b5fe0;
+}
+
+.gen-btn {
+  background: #6a11cb;
+  color: white;
+}
+
+.gen-btn:hover {
+  background: #520ea1;
+}
